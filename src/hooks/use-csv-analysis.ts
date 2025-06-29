@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { AnalysisHighlight } from '@app-types/analysis';
 import { Highlights } from '@app-types/common';
-import { InvalidServerResponseError, transformAnalysisData } from '@utils/analysis';
+import { InvalidServerResponseError, transformAnalysisData } from '@utils/analysis/analysis';
 import { API_HOST } from '@utils/consts';
 
 const DEFAULT_ROWS = 10000;

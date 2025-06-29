@@ -4,11 +4,13 @@ import { HighlightsSection } from '@components/HighlightsSection';
 import { useCsvAnalysis } from '@hooks/use-csv-analysis';
 import { useAnalysisStore } from '@store/analysisStore';
 import { Typography } from '@ui/Typography';
-import { addToHistory } from '@utils/storage';
+import { addToHistory } from '@utils/storage/storage';
+
 
 import styles from './HomePage.module.css';
 
 export const HomePage = () => {
+    
     const { file, status, highlights, error, setFile, setStatus, setHighlights, reset, setError } = useAnalysisStore();
 
     const onComplete = (highlights?: Highlights) => {

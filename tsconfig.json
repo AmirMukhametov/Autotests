@@ -1,39 +1,41 @@
 {
-    "compilerOptions": {
-        "target": "ES2020",
-        "useDefineForClassFields": true,
-        "lib": ["ES2020", "DOM", "DOM.Iterable"],
-        "module": "ESNext",
-        "skipLibCheck": true,
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
 
-        /* Bundler mode */
-        "moduleResolution": "bundler",
-        "allowImportingTsExtensions": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "react-jsx",
+    /* Module resolution for Vite and bundlers */
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
 
-        /* Linting */
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "baseUrl": ".",
-        "paths": {
-            "@pages/*": ["src/pages/*"],
-            "@components/*": ["src/components/*"],
-            "@layouts/*": ["src/layouts/*"],
-            "@services/*": ["src/services/*"],
-            "@store/*": ["src/store/*"],
-            "@styles/*": ["src/styles/*"],
-            "@utils/*": ["src/utils/*"],
-            "@hooks/*": ["src/hooks/*"],
-            "@ui/*": ["src/ui/*"],
-            "@constants/*": ["src/constants/*"],
-            "@app-types/*": ["src/types/*"]
-        }
-    },
-    "include": ["src"],
-    "references": [{ "path": "./tsconfig.node.json" }]
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "baseUrl": "./src",
+    "paths": {
+      "@pages/*": ["pages/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@services/*": ["services/*"],
+      "@store/*": ["store/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
+      "@ui/*": ["ui/*"],
+      "@constants/*": ["constants/*"],
+      "@app-types/*": ["types/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
